@@ -1,0 +1,74 @@
+.card{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 9px 0px rgba(255,255,255,0.84);
+-webkit-box-shadow: 1px 1px 9px 0px rgba(255,255,255,0.84);
+-moz-box-shadow: 1px 1px 9px 0px rgba(255,255,255,0.84);
+}
+
+.cardImg{
+    margin-top: 10px; 
+    width: 180px;
+    height: 200px;
+    background-size: cover;
+
+}
+
+.card h4{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.volteada{
+    display: none;
+}
+
+.back{
+    width: 200px;
+    height: 300px;
+    transition: all .3s;
+    transform: rotateY(180deg);
+    background-color: rgb(134, 134, 134);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.buttonCard{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.buttonCard:hover{
+    transition: all .3s;
+    transform: scale(1.2);
+}
+
+.close{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+    color: white;
+    background-color: red;
+}
+
+.close:hover{
+    transition: all .3s;
+    transform: scale(1.2);
+    cursor: pointer;
+}
