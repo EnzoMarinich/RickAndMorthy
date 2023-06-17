@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import style from "./Form.module.css"
 import { validation } from './validations'
+import img from "../../assets/login-rickk.png" 
 
 export const Form = ({login}) => {
 
@@ -37,7 +38,7 @@ export const Form = ({login}) => {
   return (
     <div className={style.container}>
       <form className={style.form} onSubmit={handleSubmit}>
-        <div className={style.img}>
+        <div className={style.img} style={{backgroundImage : `url(${img})`}}> 
         </div>
           <div className={style.input}>
               <label>Email:</label>

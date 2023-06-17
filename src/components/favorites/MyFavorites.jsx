@@ -5,8 +5,7 @@ import style from "./MyFavorites.module.css"
 
 const MyFavorites = ({onClose}) => {
 
-
-    const myFavorites = useSelector(state => state.myFavorites)
+  const myFavorites = useSelector(state => state.myFavorites)
 
   return (
     <div className={style.container}>

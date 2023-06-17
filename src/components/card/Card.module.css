@@ -1,74 +1,53 @@
 .card{
-    width: 200px;
-    height: 300px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 1px 1px 9px 0px rgba(255,255,255,0.84);
--webkit-box-shadow: 1px 1px 9px 0px rgba(255,255,255,0.84);
--moz-box-shadow: 1px 1px 9px 0px rgba(255,255,255,0.84);
-}
-
-.cardImg{
-    margin-top: 10px; 
-    width: 180px;
-    height: 200px;
+    width:  200px;
+    height: 240px;
     background-size: cover;
-
-}
-
-.card h4{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-.volteada{
-    display: none;
-}
-
-.back{
-    width: 200px;
-    height: 300px;
-    transition: all .3s;
-    transform: rotateY(180deg);
-    background-color: rgb(134, 134, 134);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    border-radius: 10px;
     position: relative;
+    box-shadow: 0px 0px 16px 2px rgba(255,255,255,0.64);
+-webkit-box-shadow: 0px 0px 16px 2px rgba(255,255,255,0.64);
+-moz-box-shadow: 0px 0px 16px 2px rgba(255,255,255,0.64);
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 240px;
+    background: inherit;
+    transition: all .5s ease;
     border-radius: 10px;
 }
 
-.buttonCard{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    font-size: larger;
-    cursor: pointer;
-}
+.card:hover::before {
+    filter: blur(3px); 
+    transform: scale(1.1);
+  }
 
-.buttonCard:hover{
-    transition: all .3s;
-    transform: scale(1.2);
-}
-
-.close{
-    width: 20px;
-    height: 20px;
-    border-radius: 5px;
+  .buttons{
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    bottom: 7px;
-    left: 10px;
-    color: white;
-    background-color: red;
-}
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
 
-.close:hover{
+  .buttons:hover{
+    opacity: 1;
+  }
+
+  .icons{
     transition: all .3s;
+  }
+
+  .buttons .icons:hover{
+    color: rgb(255, 255, 255);
     transform: scale(1.2);
-    cursor: pointer;
-}
+  }
